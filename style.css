@@ -11,7 +11,7 @@
 }
 
 .nav > .nav-header{
-    display: inline;   /*why?*/
+    display: inline;   /*why? div is block element and it does not allow the links to go next of it*/
 }
 
 .nav > .nav-header > .nav-title{
@@ -53,6 +53,7 @@
         width: 50px;
         height: 50px;
         padding: 13px;
+       
         /* background: wheat; */
     }
     /* what the hill do this does */
@@ -64,9 +65,11 @@
 
 
       .nav > .nav-btn > label > span {
+       
         display: block;
         width: 25px;
         height: 10px;
+  
         border-top: 2px solid #eee;
     }
     .nav > .nav-links {
@@ -74,7 +77,7 @@
         display: block;
         width: 100%;
         background-color: #333;
-        /* height: 0px; */
+        height: 0px;
         transition: all 0.3s ease-in;
         overflow-y: hidden;
         top: 75px;
@@ -87,10 +90,10 @@
     } 
 
     .nav > #nav-check:not(:checked) ~ .nav-links{
-        height: 0px;
+        /* height: 0px; */
         }
         .nav > #nav-check:checked ~ .nav-links{
-            height: calc(100vh - 50px);
-            overflow-y: auto;
+            height: 50vh;
+            /* overflow-y: auto; */
         }
  }
